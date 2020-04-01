@@ -5,56 +5,24 @@
         = current_user.name
         -# hoge
       .side-bar__user-name__top-items__icons
-        = link_to "#", lass: "side-bar__user-name__top-items__icons__btn" do
+        = link_to   new_group_path, class: "side-bar__user-name__top-items__icons__btn" do
           = icon('far', 'edit', class: "side-bar__user-name__top-items__icons__edit")
         = link_to edit_user_path(current_user)  do
           = icon('fa', 'cog', class: "side-bar__user-name__top-items__icons__cog")
   .side-bar__group-list
-    .side-bar__group-list__one
-      .side-bar__group-list__one__name
-        hoge
-      .side-bar__group-list__one__top-message
-        techcamp
+    - current_user.groups.each do |group|
+      .side-bar__group-list__one
+        = link_to '#' do
+          .side-bar__group-list__one__name
+            = group.name
+          .side-bar__group-list__one__top-message
+            メッセージはまだありません。
+
+
+    -# .side-bar__group-list__one
+    -#   .side-bar__group-list__one__name
+        
+    -#   .side-bar__group-list__one__top-message
+    -#     techcamp
     
-    .side-bar__group-list__one
-      .side-bar__group-list__one__name
-        hoge
-      .side-bar__group-list__one__top-message
-        techcamp
-    
-    .side-bar__group-list__one
-      .side-bar__group-list__one__name
-        hoge
-      .side-bar__group-list__one__top-message
-        techcamp
-    
-    .side-bar__group-list__one
-      .side-bar__group-list__one__name
-        hoge
-      .side-bar__group-list__one__top-message
-        techcamp
-    
-    .side-bar__group-list__one
-      .side-bar__group-list__one__name
-        hoge
-      .side-bar__group-list__one__top-message
-        techcamp
-    
-    .side-bar__group-list__one
-      .side-bar__group-list__one__name
-        hoge
-      .side-bar__group-list__one__top-message
-        techcamp
-    
-    .side-bar__group-list__one
-      .side-bar__group-list__one__name
-        hoge
-      .side-bar__group-list__one__top-message
-        techcamp
-    
-    .side-bar__group-list__one
-      .side-bar__group-list__one__name
-        hoge
-      .side-bar__group-list__one__top-message
-        techcamp
-    
+  
