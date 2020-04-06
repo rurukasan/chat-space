@@ -3,7 +3,6 @@
     .side-bar__user-name__top-items
       .side-bar__user-name__top-items__name
         = current_user.name
-        -# hoge
       .side-bar__user-name__top-items__icons
         = link_to   new_group_path, class: "side-bar__user-name__top-items__icons__btn" do
           = icon('far', 'edit', class: "side-bar__user-name__top-items__icons__edit")
@@ -12,17 +11,9 @@
   .side-bar__group-list
     - current_user.groups.each do |group|
       .side-bar__group-list__one
-        = link_to '#' do
+        = link_to group_messages_path(group) do
           .side-bar__group-list__one__name
             = group.name
           .side-bar__group-list__one__top-message
-            メッセージはまだありません。
-
-
-    -# .side-bar__group-list__one
-    -#   .side-bar__group-list__one__name
-        
-    -#   .side-bar__group-list__one__top-message
-    -#     techcamp
-    
+            = group.show_last_message
   
