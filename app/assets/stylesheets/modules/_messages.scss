@@ -117,6 +117,7 @@
     background-color: #fafafa;
     padding-top: 46px;
     padding-left:  40px;
+    overflow: scroll;
   }
     .upper-message{
       display: flex;
@@ -146,12 +147,7 @@
     }
 
   .form {
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
     height: 90px;
-    // background-color: #ddd;
-    // padding:  40px;
     &__input-box{
       display: flex;
       background-color: white;
@@ -168,7 +164,7 @@
       &__image{
         font-size: 1.3rem;
         position: absolute;
-        top: 10px;
+        top: 15px;
         right: 10px;
         cursor: pointer;
         &__btn{
